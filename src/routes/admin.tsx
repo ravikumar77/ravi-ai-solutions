@@ -113,7 +113,7 @@ function ServicesAdmin() {
           </TableBody>
         </Table>
       </div>
-      <ServiceForm key={editing?.id ?? "new"} initial={editing} onCancel={() => setEditing(null)} onSave={(v) => save.mutate(v)} saving={save.isPending} />
+      <ServiceForm key={editing?.id ?? "new"} initial={editing} onCancel={() => setEditing(null)} onSave={(v: any) => save.mutate(v)} saving={save.isPending} />
     </div>
   );
 }
