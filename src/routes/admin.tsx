@@ -130,8 +130,8 @@ function ServiceForm({ initial, onSave, onCancel, saving }: any) {
         <h3 className="font-semibold">{initial ? "Edit service" : "New service"}</h3>
         {initial && <Button size="sm" variant="ghost" type="button" onClick={onCancel}>Cancel</Button>}
       </div>
-      <div className="grid gap-1.5"><Label>Title</Label><Input required value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} /></div>
-      <div className="grid gap-1.5"><Label>Description</Label><Textarea rows={4} required value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} /></div>
+      <div className="grid gap-1.5"><Label>Title</Label><Input required value={form.title} onChange={(e: any) => setForm({ ...form, title: e.target.value })} /></div>
+      <div className="grid gap-1.5"><Label>Description</Label><Textarea rows={4} required value={form.description} onChange={(e: any) => setForm({ ...form, description: e.target.value })} /></div>
       <div className="grid grid-cols-2 gap-3">
         <div className="grid gap-1.5"><Label>Icon (Workflow, Bot, Cpu, Sparkles, Zap)</Label><Input value={form.icon} onChange={(e) => setForm({ ...form, icon: e.target.value })} /></div>
         <div className="grid gap-1.5"><Label>Price</Label><Input value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} /></div>
